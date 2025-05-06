@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>萝卜头插图导航 | 精美插画资源一站式导航</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --apple-blue: #007AFF;
+            --apple-indigo: #5856D6;
+            --apple-purple: #AF52DE;
+            --apple-pink: #FF2D55;
+            --apple-red: #FF3B30;
+            --apple-orange: #FF9500;
+            --apple-yellow: #FFCC00;
+            --apple-green: #34C759;
+            --apple-teal: #5AC8FA;
+            --apple-light-blue: #64D2FF;
+            --apple-gray: #8E8E93;
+            --apple-light-gray: #F2F2F7;
+            --apple-dark-gray: #1C1C1E;
+            
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f7;
+            color: var(--apple-dark-gray);
+            line-height: 1.5;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 45, 85, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 30%, rgba(90, 200, 250, 0.07) 0%, transparent 25%),
+                radial-gradient(circle at 30% 70%, rgba(175, 82, 222, 0.06) 0%, transparent 22%),
+                radial-gradient(circle at 80% 80%, rgba(255, 204, 0, 0.05) 0%, transparent 20%);
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: var(--glass-shadow);
+            margin-bottom: 30px;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.5;
+            background-image: 
+                linear-gradient(135deg, transparent 0%, rgba(255, 45, 85, 0.08) 50%, transparent 100%),
+                linear-gradient(45deg, transparent 0%, rgba(90, 200, 250, 0.08) 50%, transparent 100%);
+            background-size: 300% 300%;
+            animation: gradientMove 15s ease infinite;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-purple));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            box-shadow: 0 6px 16px rgba(0, 122, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .logo-icon:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 122, 255, 0.4);
+        }
+        
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: rotate(45deg) translateX(-100%); }
+            50% { transform: rotate(45deg) translateX(100%); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--apple-blue), var(--apple-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGradient 6s infinite;
+        }
+        
+        @keyframes textGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .logo-text span {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--apple-gray);
+            -webkit-text-fill-color: var(--apple-gray);
+            margin-top: -5px;
+        }
+        
+        .search-container {
+            flex-grow: 1;
+            max-width: 500px;
+            margin: 0 30px;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border: none;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .search-input:focus {
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2), 0 8px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--apple-blue);
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus + .search-icon {
+            color: var(--apple-purple);
+        }
+        
+        .theme-switch {
+            display: flex;
+            align-items: center;
+        }
+        
+        .theme-switch-button {
+            background: linear-gradient(135deg, var(--apple-purple), var(--apple-blue));
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        
+        .theme-switch-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .theme-switch-button i {
+            margin-right: 6px;
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--apple-blue);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* 导航选项卡 */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .nav-tabs {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            display: flex;
+            padding: 5px;
+            box-shadow: var(--glass-shadow);
+        }
+        
+        .nav-tab {
+            padding: 10px 18px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--apple-dark-gray);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin: 0 3px;
+        }
+        
+        .nav-tab.active {
+            color: white;
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-purple));
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-tab:hover:not(.active) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        .nav-tab i {
+            margin-right: 6px;
+        }
+        
+        /* 主要内容样式 */
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .category {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--glass-shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+        }
+        
+        .category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .category-header {
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            animation: scanline 2s linear infinite;
+            opacity: 0;
+        }
+        
+        .category:hover .category-header::before {
+            opacity: 1;
+        }
+        
+        @keyframes scanline {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .category-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        .category-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+        }
+        
+        .category-1 .category-icon { background: linear-gradient(135deg, var(--apple-blue), var(--apple-teal)); }
+        .category-2 .category-icon { background: linear-gradient(135deg, var(--apple-green), var(--apple-yellow)); }
+        .category-3 .category-icon { background: linear-gradient(135deg, var(--apple-orange), var(--apple-pink)); }
+        .category-4 .category-icon { background: linear-gradient(135deg, var(--apple-red), var(--apple-pink)); }
+        .category-5 .category-icon { background: linear-gradient(135deg, var(--apple-purple), var(--apple-indigo)); }
+        .category-6 .category-icon { background: linear-gradient(135deg, var(--apple-teal), var(--apple-blue)); }
+        .category-7 .category-icon { background: linear-gradient(135deg, var(--apple-pink), var(--apple-orange)); }
+        .category-8 .category-icon { background: linear-gradient(135deg, var(--apple-yellow), var(--apple-green)); }
+        .category-9 .category-icon { background: linear-gradient(135deg, var(--apple-indigo), var(--apple-purple)); }
+        .category-10 .category-icon { background: linear-gradient(135deg, var(--apple-green), var(--apple-blue)); }
+        .category-11 .category-icon { background: linear-gradient(135deg, var(--apple-red), var(--apple-orange)); }
+        .category-12 .category-icon { background: linear-gradient(135deg, var(--apple-teal), var(--apple-indigo)); }
+        
+        .category-title {
+            font-size: 20px;
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--apple-dark-gray), #555);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .site-list {
+            list-style: none;
+            padding: 20px 25px;
+        }
+        
+        .site-item {
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .site-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .site-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .site-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--apple-blue);
+            transform: translateY(-50%) scale(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .site-item:hover::before {
+            transform: translateY(-50%) scale(1);
+        }
+        
+        .site-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--apple-dark-gray);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+        
+        .site-link:hover {
+            color: var(--apple-blue);
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .site-link i {
+            margin-right: 10px;
+            color: var(--apple-blue);
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .site-link:hover i {
+            transform: translateX(3px);
+        }
+        
+        .site-link span {
+            font-size: 13px;
+            color: var(--apple-gray);
+            margin-left: auto;
+            padding-left: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .site-link:hover span {
+            opacity: 1;
+        }
+        
+        /* 特色板块 */
+        .feature-section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--glass-shadow);
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .feature-header {
+            background: linear-gradient(135deg, var(--apple-purple), var(--apple-blue));
+            padding: 20px 25px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-title {
+            font-size: 22px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-title i {
+            margin-right: 12px;
+        }
+        
+        .feature-description {
+            margin-top: 5px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .feature-content {
+            padding: 25px;
+        }
+        
+        .image-search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .drop-area {
+            width: 100%;
+            max-width: 500px;
+            height: 200px;
+            border: 2px dashed var(--apple-blue);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: rgba(0, 122, 255, 0.05);
+            margin-bottom: 20px;
+        }
+        
+        .drop-area:hover {
+            background-color: rgba(0, 122, 255, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .drop-area i {
+            font-size: 40px;
+            color: var(--apple-blue);
+            margin-bottom: 15px;
+        }
+        
+        .drop-area p {
+            font-size: 16px;
+            color: var(--apple-dark-gray);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .drop-area span {
+            font-size: 14px;
+            color: var(--apple-gray);
+        }
+        
+        .search-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .search-button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-teal));
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .search-button i {
+            margin-right: 8px;
+        }
+        
+        .search-button.anime {
+            background: linear-gradient(135deg, var(--apple-pink), var(--apple-purple));
+        }
+        
+        .search-button.general {
+            background: linear-gradient(135deg, var(--apple-green), var(--apple-teal));
+        }
+        
+        .search-button.face {
+            background: linear-gradient(135deg, var(--apple-orange), var(--apple-red));
+        }
+        
+        /* 页脚样式 */
+        footer {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: var(--glass-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 122, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(175, 82, 222, 0.1) 0%, transparent 50%);
+        }
+        
+        .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .footer-logo-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-purple));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .footer-logo-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--apple-dark-gray);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            margin: 0 15px;
+            color: var(--apple-blue);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--apple-purple);
+            transform: translateY(-2px);
+        }
+        
+        .footer-copyright {
+            color: var(--apple-gray);
+            font-size: 14px;
+        }
+        
+        .footer-copyright span {
+            color: var(--apple-blue);
+        }
+        
+        /* 动画样式 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        /* 特效样式 */
+        .glow {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 122, 255, 0.1);
+            filter: blur(15px);
+            animation: glow 6s infinite alternate;
+            z-index: -1;
+        }
+        
+        .glow:nth-of-type(2) {
+            background: rgba(175, 82, 222, 0.1);
+            animation-delay: 2s;
+        }
+        
+        .glow:nth-of-type(3) {
+            background: rgba(255, 45, 85, 0.1);
+            animation-delay: 4s;
+        }
+        
+        @keyframes glow {
+            0% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(6); opacity: 0.6; }
+            100% { transform: scale(1); opacity: 0.3; }
+        }
+        
+        /* 响应式样式 */
+        @media (max-width: 992px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .tab-content.active {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            
+            .category-title {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            
+            .search-container {
+                margin: 20px 0;
+                max-width: 100%;
+            }
+            
+            .theme-switch {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 25px;
+            }
+            
+            .nav-tabs {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-tab {
+                margin: 5px;
+            }
+            
+            .tab-content.active {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-link {
+                margin: 8px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px 10px;
+            }
+            
+            header, .category, footer, .feature-section {
+                border-radius: 15px;
+                padding: 20px;
+            }
+            
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            
+            .logo-text {
+                font-size: 20px;
+            }
+            
+            .site-link {
+                font-size: 14px;
+            }
+        }
+        
+        /* 彩蛋效果 */
+        .easter-egg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .easter-egg:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .easter-egg i {
+            color: white;
+            font-size: 22px;
+        }
+        
+        /* 加载动画 */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader-icon {
+            width: 60px;
+            height: 60px;
+            position: relative;
+        }
+        
+        .loader-circle {
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--apple-light-gray);
+            border-top-color: var(--apple-blue);
+            border-radius: 50%;
+            animation: spin 1s infinite linear;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loader">
+        <div class="loader-icon">
+            <div class="loader-circle"></div>
+        </div>
+    </div>
+
+    <!-- 光晕效果 -->
+    <div class="glow" style="top: 20%; left: 10%;"></div>
+    <div class="glow" style="top: 60%; left: 70%;"></div>
+    <div class="glow" style="top: 80%; left: 30%;"></div>
+
+    <div class="container">
+        <header>
+            <div class="header-bg"></div>
+            <div class="header-content">
+                <div class="logo float-animation">
+                    <div class="logo-icon">R</div>
+                    <div class="logo-text">
+                        萝卜头插图导航
+                        <span>精选全球优质插图资源</span>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="搜索插图资源...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="theme-switch">
+                    <button class="theme-switch-button">
+                        <i class="fas fa-moon"></i> 切换主题
+                    </button>
+                </div>
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+        
+        <!-- 特色功能：以图搜图工具 -->
+        <div class="feature-section">
+            <div class="feature-header">
+                <h2 class="feature-title"><i class="fas fa-search-plus"></i> 以图搜图专区</h2>
+                <p class="feature-description">上传图片，让AI帮你找到相似插图、识别动漫场景或寻找原创出处</p>
+            </div>
+            <div class="feature-content">
+                <div class="image-search-container">
+                    <div class="drop-area" id="dropArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>拖放图片到这里或点击上传</p>
+                        <span>支持JPG、PNG格式，最大10MB</span>
+                    </div>
+                    <div class="search-buttons">
+                        <button class="search-button general"><i class="fas fa-search"></i> 综合搜索</button>
+                        <button class="search-button anime"><i class="fas fa-tv"></i> 动漫搜索</button>
+                        <button class="search-button face"><i class="fas fa-user"></i> 人脸搜索</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 导航选项卡 -->
+        <div class="tabs-container">
+            <div class="nav-tabs">
+                <div class="nav-tab active" data-tab="插图资源">
+                    <i class="fas fa-images"></i> 插图资源
+                </div>
+                <div class="nav-tab" data-tab="以图搜图">
+                    <i class="fas fa-search-plus"></i> 以图搜图
+                </div>
+                <div class="nav-tab" data-tab="免版权图库">
+                    <i class="fas fa-copyright"></i> 免版权图库
+                </div>
+            </div>
+        </div>
+        
+        <!-- 插图资源选项卡内容 -->
+        <div class="tab-content active" id="插图资源">
+            <div class="category category-1">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-images"></i></div>
+                    <h2 class="category-title">免费素材库</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://ultima.storytale.io/" class="site-link">
+                            <i class="fas fa-palette"></i> Ultima
+                            <span>750+ 免费插图</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://pixels.market/" class="site-link">
+                            <i class="fas fa-th"></i> Pixels Market
+                            <span>15,000+ 免费插图</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.freeimages.com/cn" class="site-link">
+                            <i class="fas fa-photo-video"></i> FreeImages
+                            <span>300,000+ 免费素材</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://storyset.com/" class="site-link">
+                            <i class="fas fa-object-group"></i> Storyset
+                            <span>免费自定义插图</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.artify.co/vector-illustrations" class="site-link">
+                            <i class="fas fa-vector-square"></i> Artify
+                            <span>5000+ 矢量插图</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-2">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-code-branch"></i></div>
+                    <h2 class="category-title">开源插画</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://illlustrations.co/" class="site-link">
+                            <i class="fas fa-pencil-ruler"></i> Illlustrations
+                            <span>开源插图工具包</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.openpeeps.com/" class="site-link">
+                            <i class="fas fa-users"></i> Open Peeps
+                            <span>手绘插画库</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.transhumans.xyz/" class="site-link">
+                            <i class="fas fa-robot"></i> Transhumans
+                            <span>开源朋克科幻艺术</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://opendoodles.com/" class="site-link">
+                            <i class="fas fa-pen-fancy"></i> Open Doodles
+                            <span>免费粗略插图</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://undraw.co/" class="site-link">
+                            <i class="fas fa-paint-brush"></i> unDraw
+                            <span>开源插图</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-3">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-user-friends"></i></div>
+                    <h2 class="category-title">角色与人物</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://sapiens.ui8.net/6f3c3c2" class="site-link">
+                            <i class="fas fa-user-astronaut"></i> Sapiens 角色生成器
+                            <span>自定义人物</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.humaaans.com/" class="site-link">
+                            <i class="fas fa-user-tie"></i> Humaaans
+                            <span>可混合搭配插画</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://uchinoko-maker.jp/" class="site-link">
+                            <i class="fas fa-cat"></i> Uchinoko Maker
+                            <span>猫插图制作</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://blush.design/collections/humaaans/humaaans" class="site-link">
+                            <i class="fas fa-child"></i> Humaaans by Pablo Stanley
+                            <span>艺术家系列</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://fresh-folk.com/" class="site-link">
+                            <i class="fas fa-walking"></i> Fresh Folk
+                            <span>现代风格人物</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-4">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-microchip"></i></div>
+                    <h2 class="category-title">AI 与技术</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://ilus.ai/" class="site-link">
+                            <i class="fas fa-brain"></i> Ilus AI
+                            <span>AI 插画生成器</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://wangyasai.github.io/Perlin-Noise/" class="site-link">
+                            <i class="fas fa-wave-square"></i> 佩林噪声
+                            <span>艺术创作工具</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://react-kawaii.vercel.app/" class="site-link">
+                            <i class="fas fa-smile-beam"></i> React Kawaii
+                            <span>React 可爱风格</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://sapiens.ui8.net/6f3c3c2" class="site-link">
+                            <i class="fas fa-sitemap"></i> Sapiens UI 工具
+                            <span>UI 生成工具</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://pictographic.io/" class="site-link">
+                            <i class="fas fa-chart-pie"></i> Pictographic
+                            <span>数据可视化</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-5">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-palette"></i></div>
+                    <h2 class="category-title">特色风格</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://absurd.design/" class="site-link">
+                            <i class="fas fa-bahai"></i> Absurd Design
+                            <span>超现实主义</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://freevintageillustrations.com/" class="site-link">
+                            <i class="fas fa-hourglass-half"></i> Free Vintage Illustrations
+                            <span>复古风格</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.irasuton.com/" class="site-link">
+                            <i class="fas fa-heart"></i> Irasuton
+                            <span>Yuru 可爱风格</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.drawkit.com/" class="site-link">
+                            <i class="fas fa-cubes"></i> DrawKit
+                            <span>2D/3D 插画</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://girlysozai.com/" class="site-link">
+                            <i class="fas fa-star"></i> ガーリー素材
+                            <span>少女风格</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-6">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-user-friends"></i></div>
+                    <h2 class="category-title">艺术家社区</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://www.illustrationx.com/" class="site-link">
+                            <i class="fas fa-briefcase"></i> IllustrationX
+                            <span>插画人才机构</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.artstation.com/?sort_by=community" class="site-link">
+                            <i class="fas fa-paint-brush"></i> ArtStation
+                            <span>艺术作品平台</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://artand.cn/" class="site-link">
+                            <i class="fas fa-landmark"></i> Artand
+                            <span>在线艺术家画廊</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.ggac.com/v2/home" class="site-link">
+                            <i class="fas fa-trophy"></i> GGAC_CG
+                            <span>CG创作平台</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://grafolio.naver.com/works/list.grfl" class="site-link">
+                            <i class="fas fa-book-open"></i> GRAFOLIO
+                            <span>创作者展示平台</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 以图搜图选项卡内容 -->
+        <div class="tab-content" id="以图搜图">
+            <div class="category category-7">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-user-circle"></i></div>
+                    <h2 class="category-title">人脸搜索</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://pimeyes.com/en/" class="site-link">
+                            <i class="fas fa-eye"></i> PimEyes
+                            <span>面部搜索引擎</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://facecheck.id/zh" class="site-link">
+                            <i class="fas fa-id-card"></i> FaceCheck
+                            <span>人脸识别搜索</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-8">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-tv"></i></div>
+                    <h2 class="category-title">动漫搜索</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://saucenao.com/index.php" class="site-link">
+                            <i class="fas fa-search"></i> SauceNAO
+                            <span>二次元图像搜索</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://ascii2d.net/" class="site-link">
+                            <i class="fas fa-image"></i> 二次元画像詳細検索
+                            <span>详细图像搜索</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.cleithral.com/" class="site-link">
+                            <i class="fas fa-film"></i> Cleithral
+                            <span>图像/GIF/视频搜索</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://trace.moe/" class="site-link">
+                            <i class="fas fa-question-circle"></i> WAIT
+                            <span>动漫场景识别</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://ai.animedb.cn/" class="site-link">
+                            <i class="fas fa-robot"></i> AnimeTrace
+                            <span>AI识别动漫番剧</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://safebooru.org/" class="site-link">
+                            <i class="fas fa-folder-open"></i> Safebooru
+                            <span>动漫图片搜索</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-1">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-search-plus"></i></div>
+                    <h2 class="category-title">通用图像搜索</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://tineye.com/" class="site-link">
+                            <i class="fas fa-eye"></i> TinEye
+                            <span>反向图像搜索</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://labs.tineye.com/multicolr/" class="site-link">
+                            <i class="fas fa-palette"></i> TinEye Multicolr
+                            <span>基于颜色搜索</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.everypixel.com/" class="site-link">
+                            <i class="fas fa-th"></i> Everypixel
+                            <span>图像搜索引擎</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://iqdb.org/" class="site-link">
+                            <i class="fas fa-layer-group"></i> Multi-service
+                            <span>多服务图像搜索</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://same.energy/" class="site-link">
+                            <i class="fas fa-bolt"></i> Same Energy
+                            <span>视觉搜索引擎</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-2">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-tools"></i></div>
+                    <h2 class="category-title">实用搜图工具</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://soutushenqi.com/" class="site-link">
+                            <i class="fas fa-magic"></i> 搜图神器
+                            <span>综合图像搜索</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.lianty.com/#/" class="site-link">
+                            <i class="fas fa-link"></i> 链图云
+                            <span>本地以图搜图</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://soutubot.moe/" class="site-link">
+                            <i class="fas fa-robot"></i> 搜图Bot酱
+                            <span>图像搜索服务</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://greasyfork.org/zh-CN/scripts/2998-search-by-image" class="site-link">
+                            <i class="fas fa-code"></i> Search By Image
+                            <span>搜图脚本工具</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://3d.iqdb.org/" class="site-link">
+                            <i class="fas fa-cubes"></i> 3D IQDB
+                            <span>多服务3D搜索</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 免版权图库选项卡内容 -->
+        <div class="tab-content" id="免版权图库">
+            <div class="category category-9">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-star"></i></div>
+                    <h2 class="category-title">热门免版权图库</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://pixabay.com/" class="site-link">
+                            <i class="fas fa-images"></i> Pixabay
+                            <span>170万+ 免费图片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://unsplash.com/" class="site-link">
+                            <i class="fas fa-camera"></i> Unsplash
+                            <span>高质量免费图像</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.pexels.com/" class="site-link">
+                            <i class="fas fa-photo-video"></i> Pexels
+                            <span>免费库存照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.freeimages.com/" class="site-link">
+                            <i class="fas fa-images"></i> FreeImages
+                            <span>30万+ 免费素材</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://openverse.org/" class="site-link">
+                            <i class="fas fa-globe"></i> 开放宇宙
+                            <span>公开许可媒体搜索</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-10">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-copyright"></i></div>
+                    <h2 class="category-title">CC0授权图库</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://cc0.cn/" class="site-link">
+                            <i class="fas fa-check-circle"></i> cc0 图片网
+                            <span>可商用图片素材</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://stocksnap.io/" class="site-link">
+                            <i class="fas fa-file-image"></i> StockSnap.io
+                            <span>CC0许可精美照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://picography.co/" class="site-link">
+                            <i class="fas fa-camera-retro"></i> Picography
+                            <span>CC0精美照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.publicdomainarchive.com/" class="site-link">
+                            <i class="fas fa-archive"></i> Public Domain Archive
+                            <span>高分辨率公共域图像</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://freeforcommercialuse.net/" class="site-link">
+                            <i class="fas fa-briefcase"></i> Free for Commercial Use
+                            <span>1175+ CC0图像</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-11">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-utensils"></i></div>
+                    <h2 class="category-title">专题图库</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://www.foodiesfeed.com/" class="site-link">
+                            <i class="fas fa-hamburger"></i> Foodiesfeed
+                            <span>免费食物图片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.bucketlistly.blog/photos" class="site-link">
+                            <i class="fas fa-plane"></i> Bucketlistly.blog
+                            <span>10,000+ 旅行照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://freenaturestock.com/" class="site-link">
+                            <i class="fas fa-leaf"></i> Free Nature Stock
+                            <span>自然主题库存照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://startupstockphotos.com/" class="site-link">
+                            <i class="fas fa-laptop-code"></i> Startup Stock Photos
+                            <span>科技类库存照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://travelcoffeebook.com/" class="site-link">
+                            <i class="fas fa-coffee"></i> Travel Coffee Book
+                            <span>美丽旅行瞬间</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-12">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-globe-asia"></i></div>
+                    <h2 class="category-title">日本免费图库</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://www.pakutaso.com/" class="site-link">
+                            <i class="fas fa-camera"></i> ぱくたそ
+                            <span>免费可商用图片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://photosku.com/" class="site-link">
+                            <i class="fas fa-image"></i> フォトスク
+                            <span>超高画质免费图像</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.photock.jp/" class="site-link">
+                            <i class="fas fa-photo-video"></i> フォトック
+                            <span>免费可商用图片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.tokyo-date.net/" class="site-link">
+                            <i class="fas fa-torii-gate"></i> 東京デート
+                            <span>东京主题素材</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://image.ajima.jp/" class="site-link">
+                            <i class="fas fa-umbrella-beach"></i> あじまぁ
+                            <span>冲绳相关素材</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-1">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-search"></i></div>
+                    <h2 class="category-title">聚合搜索</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://www.logosc.cn/so/" class="site-link">
+                            <i class="fas fa-search-plus"></i> CC0 图片聚合搜索
+                            <span>专注CC0图片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://librestock.com/" class="site-link">
+                            <i class="fas fa-search-location"></i> Librestock Photos
+                            <span>免费库存搜索引擎</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://zoommyapp.com/" class="site-link">
+                            <i class="fas fa-compress-arrows-alt"></i> Zoommy
+                            <span>130,000+ 免费照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://duososo.com/" class="site-link">
+                            <i class="fas fa-search-dollar"></i> 多搜搜
+                            <span>图片搜索引擎</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://allthefreestock.com/" class="site-link">
+                            <i class="fas fa-images"></i> AllTheFreeStock
+                            <span>免费库存资源集合</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category category-2">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-camera-retro"></i></div>
+                    <h2 class="category-title">特色图库</h2>
+                </div>
+                <ul class="site-list">
+                    <li class="site-item">
+                        <a href="https://stockcake.com/" class="site-link">
+                            <i class="fas fa-birthday-cake"></i> StockCake
+                            <span>各种场合免费图片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://pixnio.com/" class="site-link">
+                            <i class="fas fa-check-double"></i> PIXNIO
+                            <span>公共领域免费图片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.piqsels.com/" class="site-link">
+                            <i class="fas fa-cubes"></i> Piqsels
+                            <span>数百万免版税照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://www.pickpik.com/" class="site-link">
+                            <i class="fas fa-sort-amount-up"></i> PickPik
+                            <span>AI排序美丽照片</span>
+                        </a>
+                    </li>
+                    <li class="site-item">
+                        <a href="https://negativespace.co/" class="site-link">
+                            <i class="fas fa-minus-square"></i> NegativeSpace
+                            <span>免费库存照片</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-bg"></div>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">R</div>
+                    <div class="footer-logo-text">萝卜头插图导航</div>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">关于我们</a>
+                    <a href="#" class="footer-link">使用指南</a>
+                    <a href="#" class="footer-link">提交网站</a>
+                    <a href="#" class="footer-link">联系我们</a>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2025 萝卜头插图导航 | 汇集全球优质插图资源 | QQ：7957141
+                </div>
+            </div>
+        </footer>
+        
+        <!-- 彩蛋按钮 -->
+        <div class="easter-egg">
+            <i class="fas fa-magic"></i>
+        </div>
+    </div>
+    
+    <script>
+        // 页面加载动画
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader').classList.add('fade-out');
+            }, 800);
+        });
+        
+        // 选项卡切换
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 移除所有选项卡的active类
+                document.querySelectorAll('.nav-tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // 添加当前选项卡的active类
+                this.classList.add('active');
+                
+                // 隐藏所有内容
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // 显示当前选项卡对应的内容
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // 移动端菜单切换
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const tabs = document.querySelector('.nav-tabs');
+            if (tabs.style.display === 'none') {
+                tabs.style.display = 'flex';
+            } else {
+                tabs.style.display = 'none';
+            }
+        });
+        
+        // 搜索功能
+        document.querySelector('.search-input').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const siteItems = document.querySelectorAll('.site-item');
+            
+            if (searchTerm.length < 1) {
+                siteItems.forEach(item => {
+                    item.style.display = 'block';
+                });
+                return;
+            }
+            
+            siteItems.forEach(item => {
+                const siteText = item.textContent.toLowerCase();
+                if (siteText.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        // 图片上传功能
+        const dropArea = document.getElementById('dropArea');
+        let uploadedFile = null;
+        
+        // 阻止默认的拖放行为
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        // 高亮显示拖放区域
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+        
+        // 处理拖放的文件
+        dropArea.addEventListener('drop', handleDrop, false);
+        
+        // 点击上传
+        dropArea.addEventListener('click', function() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            fileInput.onchange = function(e) {
+                const file = e.target.files[0];
+                handleFiles([file]);
+            };
+            fileInput.click();
+        });
+        
+        // 搜索按钮点击事件
+        document.querySelectorAll('.search-button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (!uploadedFile) {
+                    alert('请先上传一张图片！');
+                    return;
+                }
+                
+                const type = this.classList.contains('anime') ? 'anime' : 
+                            this.classList.contains('face') ? 'face' : 'general';
+                
+                let url = '';
+                switch(type) {
+                    case 'anime':
+                        url = 'https://saucenao.com/index.php';
+                        break;
+                    case 'face':
+                        url = 'https://pimeyes.com/en/';
+                        break;
+                    default:
+                        url = 'https://tineye.com/';
+                }
+                
+                // 在实际应用中，这里应该处理图片上传到对应服务
+                // 由于这是前端演示，我们只是打开相应网站
+                window.open(url, '_blank');
+            });
+        });
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        function highlight() {
+            dropArea.classList.add('highlighted');
+            dropArea.style.backgroundColor = 'rgba(0, 122, 255, 0.15)';
+            dropArea.style.borderColor = 'var(--apple-blue)';
+            dropArea.style.transform = 'scale(1.02)';
+        }
+        
+        function unhighlight() {
+            dropArea.classList.remove('highlighted');
+            dropArea.style.backgroundColor = 'rgba(0, 122, 255, 0.05)';
+            dropArea.style.borderColor = 'var(--apple-blue)';
+            dropArea.style.transform = 'scale(1)';
+        }
+        
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+        
+        function handleFiles(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    uploadedFile = file;
+                    displayImage(file);
+                } else {
+                    alert('请上传图片文件！');
+                }
+            }
+        }
+        
+        function displayImage(file) {
+            dropArea.innerHTML = '';
+            
+            const img = document.createElement('img');
+            img.style.maxWidth = '100%';
+            img.style.maxHeight = '180px';
+            img.style.borderRadius = '8px';
+            img.style.objectFit = 'contain';
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+            
+            const text = document.createElement('p');
+            text.innerHTML = `<strong>${file.name}</strong> <br><span style="font-size: 12px; color: var(--apple-gray);">点击更换图片</span>`;
+            text.style.marginTop = '10px';
+            text.style.textAlign = 'center';
+            
+            dropArea.appendChild(img);
+            dropArea.appendChild(text);
+        }
+        
+        // 主题切换
+        let darkMode = false;
+        document.querySelector('.theme-switch-button').addEventListener('click', function() {
+            darkMode = !darkMode;
+            if (darkMode) {
+                document.body.style.backgroundColor = '#1C1C1E';
+                document.body.style.color = '#FFFFFF';
+                document.querySelector('.theme-switch-button i').className = 'fas fa-sun';
+            } else {
+                document.body.style.backgroundColor = '#f5f5f7';
+                document.body.style.color = '#1C1C1E';
+                document.querySelector('.theme-switch-button i').className = 'fas fa-moon';
+            }
+        });
+        
+        // 彩蛋效果
+        document.querySelector('.easter-egg').addEventListener('click', function() {
+            // 创建炫彩粒子效果
+            for (let i = 0; i < 50; i++) {
+                createParticle();
+            }
+        });
+        
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'fixed';
+            particle.style.width = Math.random() * 15 + 5 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.borderRadius = '50%';
+            
+            // 随机苹果风格颜色
+            const colors = [
+                'var(--apple-blue)', 
+                'var(--apple-green)', 
+                'var(--apple-red)', 
+                'var(--apple-purple)', 
+                'var(--apple-yellow)', 
+                'var(--apple-orange)'
+            ];
+            particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            // 设置初始位置（从彩蛋按钮发射）
+            const easterEgg = document.querySelector('.easter-egg');
+            const rect = easterEgg.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            particle.style.zIndex = '2000';
+            
+            // 添加到body
+            document.body.appendChild(particle);
+            
+            // 设置动画
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = 2 + Math.random() * 4;
+            const vx = Math.cos(angle) * velocity;
+            const vy = Math.sin(angle) * velocity;
+            
+            let posX = x;
+            let posY = y;
+            
+            // 动画函数
+            function animate() {
+                posX += vx;
+                posY += vy;
+                
+                // 应用重力
+                vy += 0.1;
+                
+                particle.style.left = posX + 'px';
+                particle.style.top = posY + 'px';
+                
+                // 淡出效果
+                particle.style.opacity = parseFloat(particle.style.opacity || 1) - 0.01;
+                
+                if (parseFloat(particle.style.opacity) > 0 && 
+                    posX > 0 && posX < window.innerWidth && 
+                    posY > 0 && posY < window.innerHeight) {
+                    requestAnimationFrame(animate);
+                } else {
+                    particle.remove();
+                }
+            }
+            
+            requestAnimationFrame(animate);
+        }
+        
+        // 初始化
+        document.querySelectorAll('.category').forEach((category, index) => {
+            category.style.opacity = '0';
+            category.style.transform = 'translateY(20px)';
+            category.style.transition = `all 0.5s ease ${index * 0.1}s`;
+            
+            setTimeout(() => {
+                category.style.opacity = '1';
+                category.style.transform = 'translateY(0)';
+            }, 100 + index * 100);
+        });
+    </script>
+</body>
+</html>
